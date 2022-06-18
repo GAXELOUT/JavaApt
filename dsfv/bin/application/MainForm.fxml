@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="791.0" prefWidth="1149.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainFormController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="194.0" minWidth="0.0" prefWidth="0.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="916.0" minWidth="10.0" prefWidth="689.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="457.0" minWidth="0.0" prefWidth="441.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="128.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="718.0" minHeight="10.0" prefHeight="718.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="103.0" minHeight="0.0" prefHeight="52.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <TableView fx:id="tv1" prefHeight="716.0" prefWidth="731.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <Button mnemonicParsing="false" onAction="#select1" text="Товары" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </Button>
+      <Button mnemonicParsing="false" onAction="#select2" text="Поставщики" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="100.0" />
+         </GridPane.margin>
+      </Button>
+      <Label fx:id="lb1" prefHeight="16.0" prefWidth="103.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="450.0" />
+         </GridPane.margin>
+      </Label>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+        <tabs>
+          <Tab text="Новая поставка">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="500.0" prefWidth="447.0">
+                     <children>
+                        <Label layoutX="10.0" layoutY="100.0" text="Номер товара" />
+                        <Label layoutX="10.0" layoutY="150.0" text="Номер склада" />
+                        <Label layoutX="10.0" layoutY="50.0" text="Номер поставщика" />
+                        <TextField layoutX="10.0" layoutY="70.0" prefHeight="24.0" prefWidth="100.0" />
+                        <TextField layoutX="10.0" layoutY="120.0" prefHeight="24.0" prefWidth="100.0" />
+                        <TextField layoutX="10.0" layoutY="170.0" prefHeight="24.0" prefWidth="100.0" />
+                        <Button layoutX="10.0" layoutY="650.0" mnemonicParsing="false" text="Сохранить поставку" />
+                        <TableView fx:id="tv2" layoutX="14.0" layoutY="200.0" prefHeight="200.0" prefWidth="425.0">
+                          <columns>
+                            <TableColumn prefWidth="149.0" text="Номер товара" />
+                          </columns>
+                        </TableView>
+                        <Label layoutX="10.0" layoutY="425.0" text="Номер товара" />
+                        <TextField fx:id="prodnum" layoutX="10.0" layoutY="450.0" prefHeight="24.0" prefWidth="115.0" />
+                        <Button layoutX="145.0" layoutY="450.0" mnemonicParsing="false" text="Добавить товар" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Новый поставщик">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="10.0" layoutY="150.0" text="Номер телефона" />
+                        <Label layoutX="10.0" layoutY="100.0" text="Адрес" />
+                        <Label layoutX="10.0" layoutY="200.0" text="Банковский реквизит" />
+                        <Label layoutX="10.0" layoutY="50.0" text="Название поставщика" />
+                        <TextField layoutX="10.0" layoutY="70.0" prefHeight="24.0" prefWidth="400.0" />
+                        <TextField layoutX="10.0" layoutY="220.0" prefHeight="24.0" prefWidth="200.0" />
+                        <TextField layoutX="10.0" layoutY="170.0" />
+                        <TextField layoutX="10.0" layoutY="120.0" prefHeight="24.0" prefWidth="400.0" />
+                        <Button layoutX="10.0" layoutY="300.0" mnemonicParsing="false" text="Сохранить поставщика" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Новый производитель">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="10.0" layoutY="150.0" text="Номер телефона " />
+                        <Label layoutX="10.0" layoutY="200.0" text="Банковский реквизит" />
+                        <Label layoutX="10.0" layoutY="100.0" text="Адрес" />
+                        <Label layoutX="10.0" layoutY="50.0" text="Название производителя" />
+                        <TextField layoutX="10.0" layoutY="70.0" prefHeight="24.0" prefWidth="400.0" />
+                        <TextField layoutX="10.0" layoutY="220.0" prefHeight="24.0" prefWidth="250.0" />
+                        <TextField layoutX="10.0" layoutY="170.0" />
+                        <TextField layoutX="10.0" layoutY="120.0" prefHeight="24.0" prefWidth="400.0" />
+                        <Button layoutX="10.0" layoutY="300.0" mnemonicParsing="false" text="Сохранить производителя" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button mnemonicParsing="false" onAction="#select3" text="Производитель" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="230.0" />
+         </GridPane.margin>
+      </Button>
+   </children>
+</GridPane>
